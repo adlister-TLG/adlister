@@ -1,11 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .gitignore
-.idea/artifacts/
-.idea/libraries/
-.idea/vcs.xml
-.idea/workspace.xml
-.idea/dataSources.local.xml
-.idea/dataSources/
+.idea/*
 target/
 Config.java
-.idea/sqldialects.xml
+
