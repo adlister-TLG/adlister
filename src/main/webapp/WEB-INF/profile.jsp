@@ -1,17 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="/WEB-INF/partials/head.jsp">
+    <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Your Clownster Profile" />
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+    <jsp:include page="partials/navbar.jsp" />
 
     <div class="container">
         <h1>Welcome to Clownster, ${sessionScope.user.username}!</h1>
     </div>
-    <form action="upload" method="post" enctype="multipart/form-data">
+    <form action="/upload" method="post" enctype="multipart/form-data">
         <label for="description">Description</label>
         <input type="text" name="description" id="description"/>
 

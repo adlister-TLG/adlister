@@ -1,12 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="/WEB-INF/partials/head.jsp">
+    <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Log Into Clownster" />
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+    <jsp:include page="partials/navbar.jsp" />
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -41,6 +41,6 @@
             </div>
         </div>
     </div>
-    <jsp:include page="/WEB-INF/partials/scripts.jsp" />
+    <jsp:include page="partials/scripts.jsp" />
 </body>
 </html>
