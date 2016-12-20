@@ -10,8 +10,8 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Here Are all the ads!</h1>
-    <a href="/ads/create">Create Ad</a>
+
+    <h1 class="text-center">Current Clownster Listings</h1>
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
