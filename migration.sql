@@ -25,8 +25,8 @@ CREATE TABLE pictures (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   user_id INT UNSIGNED NOT NULL,
   default BOOLEAN DEFAULT(0),
-  picture_location VARCHAR(50),
-  description VARCHAR (250),
+  picture_location VARCHAR(50) NULL,
+  description VARCHAR (250) NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES users(id)
 )

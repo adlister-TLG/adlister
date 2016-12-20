@@ -11,12 +11,15 @@
     <div class="container">
         <h1>Welcome to Clownster, ${sessionScope.user.username}!</h1>
     </div>
-    <form action="/upload_picture" method="post">
-        <div class="form-group">
-            <label for="profile_picture">Upload picture</label>
-            <input id="profile_picture" name="profile_picture" class="form-control" type="file">
-        </div>
-        <input type="submit" class="btn btn-primary btn-block">
+    <form action="upload" method="post" enctype="multipart/form-data">
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description"/>
+
+        <label for="location">Where was this photo taken?</label>
+        <input type="text" name="location" id="location" />
+
+        <input type="file" name="file" />
+        <input type="submit" />
     </form>
 
 </body>
