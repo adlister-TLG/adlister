@@ -21,4 +21,14 @@ CREATE TABLE ads (
         ON DELETE CASCADE
 );
 
+CREATE TABLE pictures (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id INT UNSIGNED NOT NULL,
+  default BOOLEAN DEFAULT(0),
+  picture_location VARCHAR(50),
+  description VARCHAR (250),
+  PRIMARY KEY (id),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+)
+
 SELECT * from users;
