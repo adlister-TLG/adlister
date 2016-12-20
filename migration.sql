@@ -2,6 +2,7 @@ USE adlister_db;
 
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS pictures;
 
 CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -21,4 +22,20 @@ CREATE TABLE ads (
         ON DELETE CASCADE
 );
 
+CREATE TABLE pictures (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id INT UNSIGNED NOT NULL,
+  picture_location VARCHAR(50) NULL,
+  description VARCHAR (250) NULL,
+  file_name VARCHAR(250) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
 SELECT * from users;
+SELECT * from pictures;
+
+INSERT INTO users (username, email, password)
+    VALUES (
+        danny_
+    )
