@@ -3,13 +3,59 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Welcome to my site!" />
+        <jsp:param name="title" value="Welcome to Clownster!" />
     </jsp:include>
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container">
-        <h1>Welcome to the Adlister!</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1>
+                        Hello, Welcome to Clownster!
+                    </h1>
+
+                    <p>
+                        Tired of juggling your options?  We're Clownster, your #1 user-generated resource for finding, hiring and being a clown! We're here to help you connect with the clown that is perfect for your event or gathering! Search through our independent clown ads to find EXACTLY what you're looking for!  Click below to view our ads, or register to start creating your own ad.
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-large" href="/ads">View Ads</a>
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-large" href="/register">Register Here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">
+                    Here are Some Selected Clowns
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="http://placehold.it/300x400">
+                <button type="button" class="btn btn-default">
+                    View Ad
+                </button>
+            </div>
+            <div class="col-md-4">
+                <img src="http://placehold.it/300x400">
+                <button type="button" class="btn btn-default">
+                    View Ad
+                </button>
+            </div>
+            <div class="col-md-4">
+                <img src="http://placehold.it/300x400">
+                <button type="button" class="btn btn-default">
+                    View Ad
+                </button>
+            </div>
+        </div>
     </div>
+    <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 </body>
 </html>
