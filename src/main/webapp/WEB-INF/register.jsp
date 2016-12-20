@@ -2,13 +2,13 @@
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Register For Our Site!" />
+        <jsp:param name="title" value="Register For Clownster!" />
     </jsp:include>
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
-        <h1>Please fill in your information.</h1>
+        <h1>Register for Clownster</h1>
         <form action="/register" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
