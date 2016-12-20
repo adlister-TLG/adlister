@@ -12,32 +12,23 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Please Log In!</h1>
+                        <h1 class="text-center">Please Log In!</h1>
                     </div>
                 </div>
-                <form action="/login" method="POST" role="form">
-                    <div class="form-group">
-                        <label for="username">
-                            Username
-                        </label>
-                        <input type="text" class="form-control" id="username" name="username" />
-                    </div>
-                    <div class="form-group">
-
-                        <label for="password">
-                            Password
-                        </label>
-                        <input type="password" class="form-control" id="password" name="password" />
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" /> Remember Me
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block" value="Log In">
-                        Log In
-                    </button>
-                </form>
+                <div id="logincontainer">
+                    <form action="/login" method="POST" role="form">
+                        <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" class="form-control">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" class="form-control">
+                        <div id="lower">
+                            <input type="checkbox"><label class="check" id="checkbox">Keep me logged in</label>
+                            <input type="submit" value="Login">
+                        </div><!--/ lower-->
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

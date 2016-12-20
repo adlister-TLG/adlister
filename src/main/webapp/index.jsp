@@ -12,9 +12,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">
-                    <h2>
+                    <h1>
                         Hello, Welcome to Clownster!
-                    </h2>
+                    </h1>
 
                     <p>
                         Tired of juggling your options?  We're Clownster, your #1 user-generated resource for finding, hiring and being a clown! We're here to help you connect with the clown that is perfect for your event or gathering! Search through our independent clown ads to find EXACTLY what you're looking for!  Click below to view our ads, or register to start creating your own ad.
@@ -30,26 +30,29 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center text-primary">
+                <h3 class="text-center">
                     Here are Some Selected Clowns
                 </h3>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4">
-                <p>
-                    <a class="btn" href="#">View Ad »</a>
-                </p>
+                <img src="http://placehold.it/300x400">
+                <button type="button" class="btn btn-default">
+                    View Ad
+                </button>
             </div>
             <div class="col-md-4">
-                <p>
-                    <a class="btn" href="#">View Ad »</a>
-                </p>
+                <img src="http://placehold.it/300x400">
+                <button type="button" class="btn btn-default">
+                    View Ad
+                </button>
             </div>
             <div class="col-md-4">
-                <p>
-                    <a class="btn" href="#">View Ad »</a>
-                </p>
+                <img src="http://placehold.it/300x400">
+                <button type="button" class="btn btn-default">
+                    View Ad
+                </button>
             </div>
         </div>
     </div>
