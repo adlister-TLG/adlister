@@ -30,9 +30,10 @@
     </div>
     <div class="container">
         <p>
-            <a href="">Edit Profile</a>
+            <a href="/editprofile">Edit Profile</a>
         </p>
     </div>
+
 
 </body>
 </html>
