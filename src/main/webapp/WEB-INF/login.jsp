@@ -2,24 +2,45 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Please Log In- CLOWNSTER" />
+        <jsp:param name="title" value="Log Into Clownster" />
     </jsp:include>
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container">
-        <h1>Please Log In</h1>
-        <form action="/login" method="POST">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input id="username" name="username" class="form-control" type="text">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Please Log In!</h1>
+                    </div>
+                </div>
+                <form action="/login" method="POST" role="form">
+                    <div class="form-group">
+                        <label for="username">
+                            Username
+                        </label>
+                        <input type="text" class="form-control" id="username" name="username" />
+                    </div>
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+                        <input type="password" class="form-control" id="password" name="password" />
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" /> Remember Me
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" value="Log In">
+                        Log In
+                    </button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input id="password" name="password" class="form-control" type="password">
-            </div>
-            <input type="submit" class="btn btn-primary btn-block" value="Log In">
-        </form>
+        </div>
     </div>
+    <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 </body>
 </html>
