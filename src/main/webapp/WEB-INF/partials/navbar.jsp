@@ -25,22 +25,25 @@
                             <a href="/register">Register</a>
                         </li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="i.e. Chuckles, balloon twister"/>
-                        </div>
-                        <button type="submit" class="btn btn-default">
-                            Clown Around
-                        </button>
-                    </form>
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="/profile">Your profile</a>
-                        </li>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="i.e. Chuckles, balloon twister"/>
+                            </div>
+                            <button type="submit" class="btn btn-default">
+                                Clown Around
+                            </button>
+                        </form>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Options<strong
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="http://placehold.it/18x18" class="profile-image img-circle"> ${sessionScope.user.username} <strong
                                     class="caret"></strong></a>
                             <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/profile">Your Profile</a>
+                                </li>
+                                <li class="divider">
+                                </li>
                                 <li>
                                     <a href="/ads/create">Create an Ad</a>
                                 </li>
