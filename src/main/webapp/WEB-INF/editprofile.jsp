@@ -4,9 +4,9 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Edit Your Clownster Profile" />
     </jsp:include>
-<script>
+<style>
 
-</script>
+</style>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
@@ -30,18 +30,18 @@
         <div class="col-md-9 personal-info">
             <h3>Personal info</h3>
 
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" method="post" action="/editprofile">
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Bio:</label>
                     <div class="col-lg-8">
 
-                        <textarea cols="94" rows="2"></textarea>
+                        <input class="form-control" type="text" name="bio">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Skills/Specialties:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value="">
+                        <input class="form-control" type="text" name="skills">
                     </div>
                 </div>
 
