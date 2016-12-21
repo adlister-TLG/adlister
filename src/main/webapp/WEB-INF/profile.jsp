@@ -23,6 +23,7 @@
     <div class="container">
         <h2>Bio:</h2>
         <p>
+            ${sessionScope.user.bio}
         </p>
         <h2>Skills/Specialties:</h2>
         <p>

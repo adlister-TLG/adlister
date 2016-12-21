@@ -85,7 +85,7 @@ public class UploadImageServlet extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }catch(Exception ex) {
-            System.out.println(ex);
+            ex.printStackTrace();
         }
     }
 
