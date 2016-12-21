@@ -1,6 +1,7 @@
-# Created by .ignore support plugin (hsz.mobi)
+# Created by .ignore support plugin (hsz.mobi)g
 .idea/*
 target/
 Config.java
+.DS_Store
 
 .idea/

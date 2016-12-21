@@ -13,15 +13,22 @@
 
     <div class="container" align="center">
         <h1>Welcome to Clownster, ${sessionScope.user.username}!</h1>
-        <img src="http://placehold.it/250x300" alt="placeholder">
+        <h3>Picture Upload:</h3>
+        Select a picture to upload: <br />
+        <form action="/UploadImageServlet" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" size="50" />
+            <br />
+            <input type="submit" value="Upload File" />
+        </form>
     </div>
     <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 
     <div class="container">
         <h2>Bio:</h2>
         <p>
+            ${sessionScope.user.bio}
         </p>
-        <h2>Skills/Specialties:</h2>
+        <h2git>Skills/Specialties:</h2git>
         <p>
         </p>
     </div>
