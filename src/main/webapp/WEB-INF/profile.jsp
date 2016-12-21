@@ -10,7 +10,7 @@
 
     <div class="container" align="center">
         <h1>Welcome to Clownster, ${sessionScope.user.username}!</h1>
-        <img src="http://placehold.it/250x300" alt="placeholder">
+        <img src=${sessionScope.pictures.file_name} alt="" width="100" height="100">
     </div>
     <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 

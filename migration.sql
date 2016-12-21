@@ -35,7 +35,20 @@ CREATE TABLE pictures (
 SELECT * from users;
 SELECT * from pictures;
 
+INSERT INTO pictures (user_id, picture_location, description, file_name)
+    VALUES ('1', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_01.png'),
+      ('2', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_02.png'),
+      ('3', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_03.png'),
+      ('4', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_04.png'),
+      ('5', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_05.png'),
+      ('6', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_06.png'),
+      ('7', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_07.png'),
+      ('8', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_08.png');
+
+
 INSERT INTO users (username, email, password)
-    VALUES (
-        danny_
-    )
+    VALUES ('drew', 'drew@drew.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
+      ('johnny', 'jon@jon.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
+      ('mikey', 'mikey@mike.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
+      ('mark', 'mark@mark.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
+      ('vinny', 'vin@vin.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq');
