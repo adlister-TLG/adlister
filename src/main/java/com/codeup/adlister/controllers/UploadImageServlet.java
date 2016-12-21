@@ -26,6 +26,7 @@ public class UploadImageServlet extends HttpServlet {
     private int maxMemSize = 4 * 1024;
     private File file;
 
+
     public void init(){
         filePath = getServletContext().getInitParameter("file-upload");
     }
