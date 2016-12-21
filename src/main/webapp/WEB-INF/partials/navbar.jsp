@@ -15,7 +15,7 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li>
                             <a href="/ads/create">Create an Ad</a>
                         </li>
                         <li>
@@ -26,11 +26,11 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <form class="navbar-form navbar-left" role="search">
+                        <form action= "search" method="POST" class="navbar-form navbar-left" role="search">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="i.e. Chuckles, balloon twister"/>
+                                <input type="text" class="form-control" name="ad" placeholder="i.e. Chuckles, balloon twister"/>
                             </div>
-                            <button type="submit" class="btn btn-default">
+                            <button type="submit" class="btn btn-default" value="Submit">
                                 Clown Around
                             </button>
                         </form>

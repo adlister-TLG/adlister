@@ -9,8 +9,6 @@ CREATE TABLE users (
     username VARCHAR(240) NOT NULL,
     email VARCHAR(240) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    bio TEXT,
-    skills TEXT,
     PRIMARY KEY (id)
 );
 
