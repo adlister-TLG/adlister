@@ -5,11 +5,11 @@ package com.codeup.adlister.models;
  */
 public class Image {
     private long id;
-    private String userId;
+    private long userId;
     private String location;
     private String url;
 
-    public Image(long id, String userId, String location, String url) {
+    public Image(long id, long userId, String location, String url) {
         this.id = id;
         this.userId = userId;
         this.location = location;
@@ -23,11 +23,11 @@ public class Image {
         this.id = id;
     }
 
-    public String getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 

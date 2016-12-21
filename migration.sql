@@ -2,7 +2,7 @@ USE adlister_db;
 
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS pictures;
+DROP TABLE IF EXISTS images;
 
 CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -22,20 +22,20 @@ CREATE TABLE ads (
         ON DELETE CASCADE
 );
 
-CREATE TABLE pictures (
+CREATE TABLE images (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   user_id INT UNSIGNED NOT NULL,
-  picture_location VARCHAR(50) NULL,
+  img_location VARCHAR(50) NULL,
   description VARCHAR (250) NULL,
-  file_name VARCHAR(250) NOT NULL,
+  url VARCHAR(250) NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 SELECT * from users;
-SELECT * from pictures;
+SELECT * from images;
 
-INSERT INTO pictures (user_id, picture_location, description, file_name)
+INSERT INTO images (user_id, img_location, description, url)
     VALUES ('1', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_01.png'),
       ('2', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_02.png'),
       ('3', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_03.png'),
