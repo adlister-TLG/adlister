@@ -3,13 +3,13 @@ package com.codeup.adlister.models;
 /**
  * Created by lloyd on 12/21/16.
  */
-public class Images {
+public class Image {
     private long id;
     private String userId;
     private String location;
     private String url;
 
-    public Images(long id, String userId, String location, String url) {
+    public Image(long id, String userId, String location, String url) {
         this.id = id;
         this.userId = userId;
         this.location = location;
