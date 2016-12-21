@@ -12,7 +12,7 @@
         <h1>Welcome to Clownster, ${sessionScope.user.username}!</h1>
         <h3>Picture Upload:</h3>
         Select a picture to upload: <br />
-        <form action="UploadImageServlet" method="post" enctype="multipart/form-data">
+        <form action="/UploadImageServlet" method="post" enctype="multipart/form-data">
             <input type="file" name="file" size="50" />
             <br />
             <input type="submit" value="Upload File" />
