@@ -6,7 +6,7 @@ package com.codeup.adlister.models;
 public class Images {
     private long id;
     private String userId;
-    private String location
+    private String location;
     private String url;
 
     public Images(long id, String userId, String location, String url) {
