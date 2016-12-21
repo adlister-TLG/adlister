@@ -10,10 +10,13 @@ import java.io.IOException;
 /**
  * Created by lloyd on 12/21/16.
  */
-@WebServlet(name = "UploadImageServlet")
+@WebServlet(name = "UploadImageServlet", urlPatterns = "/upload")
 public class UploadImageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        if(request.getSession().getAttribute("user") == null) {
+            response.sendRedirect("/login");
+            return;
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -10,7 +10,13 @@
 
     <div class="container" align="center">
         <h1>Welcome to Clownster, ${sessionScope.user.username}!</h1>
-        <img src=${sessionScope.pictures.file_name} alt="" width="100" height="100">
+        <h3>Picture Upload:</h3>
+        Select a picture to upload: <br />
+        <form action="UploadImageServlet" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" size="50" />
+            <br />
+            <input type="submit" value="Upload File" />
+        </form>
     </div>
     <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 
