@@ -25,7 +25,7 @@
         <p>
             ${sessionScope.user.bio}
         </p>
-        <h2>Skills/Specialties:</h2>
+        <h2git>Skills/Specialties:</h2git>
         <p>
         </p>
     </div>
