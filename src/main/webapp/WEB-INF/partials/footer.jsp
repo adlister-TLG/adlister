@@ -1,4 +1,4 @@
-<footer id="footer" class="container">
+<footer id="footer" class="container-fluid">
     <div class="row">
         <div class="about col-xs-12 col-sm-6  col-md-6 col-lg-6">
             <div class="row">
@@ -46,25 +46,17 @@
         <div class="contact col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <h1>Contact Us</h1>
             <p>If there is an event you need a clown for, fill out the contact for bellow<strong>We aren't clowning around.&nbsp;</strong>
-            <form action="https://www.elformo.com/forms/986bc2e3-bfcf-487f-9e79-b6e370da09dd" method="post" accept-charset="UTF-8">
-                <input id="elformo_honeypot" name="elformo_honeypot" />
-
-                <div class="field">
-                    <label for="contact_name">Your name</label>
-                    <input type="text" name="contact[name]" id="contact_name" />
+            <form action="#" method="post" accept-charset="UTF-8">
+                <div class="col-xs-12">
+                    <input type="text" name="contact[name]" class="form-control" id="footer_contact_name" placeholder="Your name"/>
                 </div>
-                <div class="field">
-                    <label for="contact_address">Your e-mail</label>
-                    <input type="text" name="contact[address]" id="contact_address" />
+                <div class="col-xs-12">
+                    <input type="email" name="contact[address]" class="form-control" id="footer_contact_address"placeholder="Your e-mail" />
                 </div>
-                <div class="field">
-                    <label for="contact_message">How can we help you?</label>
-                    <textarea name="contact[message]" id="contact_message"></textarea>
+                <div class="col-xs-12">
+                    <textarea name="contact[message]" class="form-control" rows="3" id="footer_contact_message" placeholder="How can we help you?" ></textarea>
                 </div>
-                <div class="verification-field">
-                    <input type="text" name="contact[verification]" id="contact_verification" />
-                </div>
-                <div class="actions">
+                <div class="col-xs-12">
                     <button>Let's talk<?xml version="1.0" encoding="utf-8"?>
                         <!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
