@@ -133,3 +133,12 @@ input[type=submit]:active {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
 
 }
+
+.social-links img {
+    width: 2%;
+    height: auto;
+}
+
+#footer {
+    background-color: lime;
+}

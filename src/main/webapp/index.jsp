@@ -1,5 +1,36 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+
+<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+                   url="jdbc:mysql://localhost/adlister_db"
+                   user="root"  password="codeup"/>
+
+<sql:query dataSource="${snapshot}" var="result1">
+    SELECT *
+    FROM users
+    ORDER BY RAND()
+    LIMIT 1;
+</sql:query>
+<sql:query dataSource="${snapshot}" var="result2">
+    SELECT *
+    FROM users
+    ORDER BY RAND()
+    LIMIT 1;
+</sql:query>
+<sql:query dataSource="${snapshot}" var="result3">
+    SELECT *
+    FROM users
+    ORDER BY RAND()
+    LIMIT 1;
+</sql:query>
+
+<sql:query dataSource="${snapshot}" var="snow">
+    SELECT * from users where username = 'john_snow';
+</sql:query>
+
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
@@ -8,7 +39,9 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container-fluid">
+
+
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">
@@ -37,18 +70,27 @@
         </div>
         <div class="row">
             <div class="col-md-4">
+                <c:forEach var="row" items="${result1.rows}">
+                    <h3><c:out value="${row.username}"/></h3>
+                </c:forEach>
                 <img src="http://placehold.it/300x400">
                 <button type="button" class="btn btn-default">
                     View Ad
                 </button>
             </div>
             <div class="col-md-4">
+                <c:forEach var="row" items="${result2.rows}">
+                    <h3><c:out value="${row.username}"/></h3>
+                </c:forEach>
                 <img src="http://placehold.it/300x400">
                 <button type="button" class="btn btn-default">
                     View Ad
                 </button>
             </div>
             <div class="col-md-4">
+                <c:forEach var="row" items="${result3.rows}">
+                    <h3><c:out value="${row.username}"/></h3>
+                </c:forEach>
                 <img src="http://placehold.it/300x400">
                 <button type="button" class="btn btn-default">
                     View Ad
@@ -56,6 +98,8 @@
             </div>
         </div>
     </div>
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
     <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 </body>
 </html>
+
