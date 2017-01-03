@@ -140,7 +140,7 @@ input[type=submit]:active {
 }
 
 #footer {
-    background-color: lime;
+    background-color: #FFC100;
 }
 input#footer_contact_name {
     width: 100% !important;
