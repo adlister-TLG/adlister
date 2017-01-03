@@ -11,7 +11,7 @@
 <sql:query dataSource="${snapshot}" var="result1">
     SELECT u.username, iu.url
     FROM users as u
-    LEFT JOIN (SELECT url, user_id FROM images as i
+    LEFT JOIN (SELECT url, gif, user_id FROM images as i
     ORDER BY RAND()) as iu
     ON iu.user_id = u.id
     ORDER BY rand()
@@ -20,7 +20,7 @@
 <sql:query dataSource="${snapshot}" var="result2">
     SELECT u.username, iu.url
     FROM users as u
-    LEFT JOIN (SELECT url, user_id FROM images as i
+    LEFT JOIN (SELECT url, gif, user_id FROM images as i
     ORDER BY RAND()) as iu
     ON iu.user_id = u.id
     ORDER BY rand()
@@ -29,7 +29,7 @@
 <sql:query dataSource="${snapshot}" var="result3">
     SELECT u.username, iu.url
     FROM users as u
-    LEFT JOIN (SELECT url, user_id FROM images as i
+    LEFT JOIN (SELECT url, gif, user_id FROM images as i
     ORDER BY RAND()) as iu
     ON iu.user_id = u.id
     ORDER BY rand()

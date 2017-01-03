@@ -29,6 +29,7 @@ CREATE TABLE images (
   img_location VARCHAR(50)  NULL,
   description  VARCHAR(250) NULL,
   url          VARCHAR(250) NOT NULL,
+  gif          VARCHAR(250) NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES users (id)
 );
@@ -62,23 +63,23 @@ INSERT INTO users (username, email, password, bio, skills) VALUES
   ('Mark', 'mark@mark.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'Mark bio', 'Mark skills'),
   ('Vinny', 'vin@vin.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'Vinny bio', 'Vinny skills');
 
-INSERT INTO images (user_id, img_location, description, url) VALUES
-  ('1', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_01.jpg'),
-  ('2', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_02.jpg'),
-  ('3', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_03.jpg'),
-  ('4', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_04.jpg'),
-  ('5', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_05.jpg'),
-  ('6', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_06.jpg'),
-  ('7', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_07.jpg'),
-  ('8', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_08.jpg');
+INSERT INTO images (user_id, img_location, description, url, gif) VALUES
+  ('1', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_01.jpg','/pictures/profile/profile_pic_01.gif'),
+  ('2', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_02.jpg','/pictures/profile/profile_pic_02.gif'),
+  ('3', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_03.jpg','/pictures/profile/profile_pic_03.gif'),
+  ('4', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_04.jpg','/pictures/profile/profile_pic_04.gif'),
+  ('5', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_05.jpg','/pictures/profile/profile_pic_05.gif'),
+  ('6', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_06.jpg','/pictures/profile/profile_pic_06.gif'),
+  ('7', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_07.jpg','/pictures/profile/profile_pic_07.gif'),
+  ('8', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_08.jpg','/pictures/profile/profile_pic_08.gif');
 
 INSERT INTO ads (user_id, title, description) VALUES
   (1, 'Brad the mad dancer knows how bring it', 'Do you need a dancing MACHINE? Look no further than Brad the world renown Clown dancer!'),
-  (2, 'John Snow juggles balls', 'Do you need a talented ball juggler? Look no further than john snow the world renown juggler of balls!'),
-  (3, 'Danny spits hot fire!', 'Do you need a talented fire breather? Look no further than Danny the world renown Fire breather!'),
-  (4, 'Drew knows magic', 'Do you need a talented magician? Look no further than Drew the world renown Magician!'),
-  (5, 'Johnny is a Balloon Genius', 'Do you need a talented balloon maker? Look no further than Johnny  the world renown maker of balloons!'),
-  (6, 'Mikey is an Acrobat', 'Do you need a talented Acrobat? Look no further than john snow the world renown tumbler and trapeeze artist!'),
+  (2, 'John Snow juggles balls', 'Do you need a talented ball juggler? Look no further than john snow the world renown juggler of balls!  Always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling'),
+  (3, 'Danny spits hot fire!', 'Do you need a talented fire breather? Look no further than Danny the world renown Fire breather!  Do not stand too close to this fire breathin maniac or youll get toasted!  Wait until you see his trick with the marshmallows, always a crowd pleaser'),
+  (4, 'Drew knows magic', 'Do you need a talented magician? Look no further than Drew the world renown Magician!  Yes, he is the magic man, no one has more tricks than this guy!  Rabbit in the hat, sawing his assistant in half, he has got it all'),
+  (5, 'Johnny is a Balloon Genius', 'Do you need a talented balloon maker? Look no further than Johnny  the world renown maker of balloons!  He will twist up those balloons into all shapes and sizes and he comes with his own helium'),
+  (6, 'Mikey is an Acrobat', 'Do you need a talented Acrobat? Look no further than john snow the world renown tumbler and trapeeze artist!  This guy spins through the air with the greatest of ease!  only a 45% fail rate on this guys jumps, but believe me, that is pretty good for this area!  Help him pay for his hospital bills!'),
   (7, 'Mark the Clown', 'Do you need a talented Clown for kids parties? Look no further than Mark, the world renown childrens party clown!'),
   (8, 'Vinny is Amazeballs', 'Do you need a talented Clown for an event? Look no further than Vinny, the world renown Clown from Italy!');
 
