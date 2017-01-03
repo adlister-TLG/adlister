@@ -64,7 +64,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h3 class="text-center">
-                    Here are Some Selected Clowns
+                    Here are Some Selected Clowns!
                 </h3>
             </div>
         </div>
