@@ -29,15 +29,6 @@
                         </c:if>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <form action="search" method="POST" class="navbar-form navbar-left" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="ad"
-                                       placeholder="i.e. Chuckles, balloon twister"/>
-                            </div>
-                            <button type="submit" class="btn btn-default" value="Submit">
-                                Clown Around
-                            </button>
-                        </form>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="http://placehold.it/18x18"

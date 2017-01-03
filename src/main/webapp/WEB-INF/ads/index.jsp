@@ -16,9 +16,13 @@
 <div class="row">
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6 text-center">
+            <div class="jumbotron">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-            <p><a href="/ads?id=${ad.id}">Show More Details</a></p>
+                <p>
+                    <a href="/ads?id=${ad.id}" class="btn btn-primary btn-large" href="#">Show More Details</a>
+                </p>
+        </div>
         </div>
     </c:forEach>
 </div>
