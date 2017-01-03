@@ -9,27 +9,30 @@
                    user="root"  password="codeup"/>
 
 <sql:query dataSource="${snapshot}" var="result1">
-    SELECT *
+    SELECT u.username, iu.url
     FROM users as u
-    JOIN images as i
-    ON i.user_id = i.id
-    ORDER BY RAND()
+    LEFT JOIN (SELECT url, user_id FROM images as i
+    ORDER BY RAND()) as iu
+    ON iu.user_id = u.id
+    ORDER BY rand()
     LIMIT 1;
 </sql:query>
 <sql:query dataSource="${snapshot}" var="result2">
-    SELECT *
+    SELECT u.username, iu.url
     FROM users as u
-    JOIN images as i
-    ON i.user_id = i.id
-    ORDER BY RAND()
+    LEFT JOIN (SELECT url, user_id FROM images as i
+    ORDER BY RAND()) as iu
+    ON iu.user_id = u.id
+    ORDER BY rand()
     LIMIT 1;
 </sql:query>
 <sql:query dataSource="${snapshot}" var="result3">
-    SELECT *
+    SELECT u.username, iu.url
     FROM users as u
-    JOIN images as i
-    ON i.user_id = i.id
-    ORDER BY RAND()
+    LEFT JOIN (SELECT url, user_id FROM images as i
+    ORDER BY RAND()) as iu
+    ON iu.user_id = u.id
+    ORDER BY rand()
     LIMIT 1;
 </sql:query>
 
@@ -78,26 +81,26 @@
             <div class="col-md-4">
                 <c:forEach var="row" items="${result1.rows}">
                     <h3><c:out value="${row.username}"/></h3>
+                    <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <img src="http://placehold.it/300x400">
                 <button type="button" class="btn btn-default">
                     View Ad
                 </button>
             </div>
             <div class="col-md-4">
-                <c:forEach var="row" items="${result2.rows}">
+                <c:forEach var="row" items="${result1.rows}">
                     <h3><c:out value="${row.username}"/></h3>
+                    <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <img src="http://placehold.it/300x400">
                 <button type="button" class="btn btn-default">
                     View Ad
                 </button>
             </div>
             <div class="col-md-4">
-                <c:forEach var="row" items="${result3.rows}">
+                <c:forEach var="row" items="${result1.rows}">
                     <h3><c:out value="${row.username}"/></h3>
+                    <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <img src="http://placehold.it/300x400">
                 <button type="button" class="btn btn-default">
                     View Ad
                 </button>
