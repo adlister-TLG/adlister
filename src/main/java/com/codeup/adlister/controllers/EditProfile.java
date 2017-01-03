@@ -23,7 +23,14 @@ public class EditProfile extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/editprofile.jsp").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        User user = (User) request.getSession().getAttribute("user");
 
+        String bio = request.getParameter("bio");
+        String skills = request.getParameter("skills");
+        user.setBio(bio);
+        user.setSkills(skills);
+        DaoFactory.getUsersDao().updateUser(user);
+        response.sendRedirect("/profile");
 
 
 

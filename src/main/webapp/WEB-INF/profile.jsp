@@ -30,6 +30,7 @@
         </p>
         <h2>Skills/Specialties:</h2>
         <p>
+            ${sessionScope.user.skills}
         </p>
     </div>
     <div class="container">
