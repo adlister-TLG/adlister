@@ -1,49 +1,61 @@
 USE adlister_db;
+
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS images;
 DROP TABLE IF EXISTS pictures;
 DROP TABLE IF EXISTS users;
+
 CREATE TABLE users (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  id       INT UNSIGNED NOT NULL AUTO_INCREMENT,
   username VARCHAR(240) NOT NULL,
-  email VARCHAR(240) NOT NULL,
+  email    VARCHAR(240) NOT NULL,
   password VARCHAR(255) NOT NULL,
-  bio TEXT,
-  skills TEXT,
+  bio      TEXT,
+  skills   TEXT,
   PRIMARY KEY (id)
 );
 CREATE TABLE ads (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  user_id INT UNSIGNED NOT NULL,
-  title VARCHAR(240) NOT NULL,
-  description TEXT NOT NULL,
+  id          INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id     INT UNSIGNED NOT NULL,
+  title       VARCHAR(240) NOT NULL,
+  description TEXT         NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (user_id) REFERENCES users(id)
+  FOREIGN KEY (user_id) REFERENCES users (id)
     ON DELETE CASCADE
 );
 CREATE TABLE images (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  user_id INT UNSIGNED NOT NULL,
-  img_location VARCHAR(50) NULL,
-  description VARCHAR (250) NULL,
-  url VARCHAR(250) NOT NULL,
+  id           INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id      INT UNSIGNED NOT NULL,
+  img_location VARCHAR(50)  NULL,
+  description  VARCHAR(250) NULL,
+  url          VARCHAR(250) NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (user_id) REFERENCES users(id)
+  FOREIGN KEY (user_id) REFERENCES users (id)
 );
-SELECT * from users;
-SELECT * from images;
-INSERT INTO users (username, email, password)
-VALUES
-  ('admin', 'admin@admin.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
-  ('john_snow', 'joe@joe.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
-  ('danny', 'danny@dan.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
-  ('drew', 'drew@drew.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
-  ('johnny', 'jon@jon.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
-  ('mikey', 'mikey@mike.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
-  ('mark', 'mark@mark.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq'),
-  ('vinny', 'vin@vin.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq');
-INSERT INTO images (user_id, img_location, description, url)
-VALUES ('1', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_01.png'),
+SELECT *
+FROM users
+ORDER BY RAND()
+LIMIT 1;
+SELECT *
+FROM images;
+SELECT *
+FROM ads;
+
+SELECT * from users where username = 'john_snow';
+
+
+INSERT INTO users (username, email, password, bio, skills) VALUES
+  ('admin', 'admin@admin.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'admin bio', 'admin skills'),
+  ('john_snow', 'joe@joe.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'john snow bio', 'john snow skills'),
+  ('danny', 'danny@dan.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'danny bio', 'danny skills'),
+  ('drew', 'drew@drew.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'drew bio', 'drew skills'),
+  ('johnny', 'jon@jon.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'Johnny bio', 'johnny skills'),
+  ('mikey', 'mikey@mike.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'Mikey bio', 'Mikey skills'),
+  ('mark', 'mark@mark.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'Mark bio', 'Mark skills'),
+  ('vinny', 'vin@vin.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'Vinny bio', 'Vinny skills');
+
+INSERT INTO images (user_id, img_location, description, url) VALUES
+  ('1', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_01.png'),
   ('2', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_02.png'),
   ('3', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_03.png'),
   ('4', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_04.png'),
@@ -53,9 +65,11 @@ VALUES ('1', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_0
   ('8', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_08.png');
 
 INSERT INTO ads (user_id, title, description) VALUES
-  ('1', 'Jingle The Juggler', 'Lorem ipsum dolor sit amet molestie lorem eget risus. Fusce est viverra. Ultricies tristique mattis. Vestibulum lorem molestie convallis amet sem malesuada diam pellentesque. Dui mauris sapien etiam metus enim sem dignissim mi. Laoreet dolor velit vel interdum neque eleifend feugiat praesent. Ut et blandit. Dui congue eleifend. Orci animi nec. In sed ultrices vel ut semper. Facilisis ut a adipiscing eget a enim wisi adipiscing curabitur parturient dolor. Accumsan leo nunc lacus velit fringilla lectus elementum nec. A ac erat a pellentesque mi. Habitant hendrerit ullamcorper. Et velit justo nunc ante arcu. Gravida eu tellus. Adipiscing quam congue nullam.'),
-  ('2', 'Daffodil', 'Lorem ipsum dolor sit amet molestie lorem eget risus. Fusce est viverra. Ultricies tristique mattis. Vestibulum lorem molestie convallis amet sem malesuada diam pellentesque. Dui mauris sapien etiam metus enim sem dignissim mi. Laoreet dolor velit vel interdum neque eleifend feugiat praesent. Ut et blandit. Dui congue eleifend. Orci animi nec. In sed ultrices vel ut semper. Facilisis ut a adipiscing eget a enim wisi adipiscing curabitur parturient dolor. Accumsan leo nunc lacus velit fringilla lectus elementum nec. A ac erat a pellentesque mi. Habitant hendrerit ullamcorper. Et velit justo nunc ante arcu. Gravida eu tellus. Adipiscing quam congue nullam.'),
-  ('3', 'Sadboy The Clown', 'Lorem ipsum dolor sit amet molestie lorem eget risus. Fusce est viverra. Ultricies tristique mattis. Vestibulum lorem molestie convallis amet sem malesuada diam pellentesque. Dui mauris sapien etiam metus enim sem dignissim mi. Laoreet dolor velit vel interdum neque eleifend feugiat praesent. Ut et blandit. Dui congue eleifend. Orci animi nec. In sed ultrices vel ut semper. Facilisis ut a adipiscing eget a enim wisi adipiscing curabitur parturient dolor. Accumsan leo nunc lacus velit fringilla lectus elementum nec. A ac erat a pellentesque mi. Habitant hendrerit ullamcorper. Et velit justo nunc ante arcu. Gravida eu tellus. Adipiscing quam congue nullam.'),
-  ('4', 'Honker', 'Lorem ipsum dolor sit amet molestie lorem eget risus. Fusce est viverra. Ultricies tristique mattis. Vestibulum lorem molestie convallis amet sem malesuada diam pellentesque. Dui mauris sapien etiam metus enim sem dignissim mi. Laoreet dolor velit vel interdum neque eleifend feugiat praesent. Ut et blandit. Dui congue eleifend. Orci animi nec. In sed ultrices vel ut semper. Facilisis ut a adipiscing eget a enim wisi adipiscing curabitur parturient dolor. Accumsan leo nunc lacus velit fringilla lectus elementum nec. A ac erat a pellentesque mi. Habitant hendrerit ullamcorper. Et velit justo nunc ante arcu. Gravida eu tellus. Adipiscing quam congue nullam.'),
-  ('5', 'Lloyd The Drunk Clown', 'Lorem ipsum dolor sit amet molestie lorem eget risus. Fusce est viverra. Ultricies tristique mattis. Vestibulum lorem molestie convallis amet sem malesuada diam pellentesque. Dui mauris sapien etiam metus enim sem dignissim mi. Laoreet dolor velit vel interdum neque eleifend feugiat praesent. Ut et blandit. Dui congue eleifend. Orci animi nec. In sed ultrices vel ut semper. Facilisis ut a adipiscing eget a enim wisi adipiscing curabitur parturient dolor. Accumsan leo nunc lacus velit fringilla lectus elementum nec. A ac erat a pellentesque mi. Habitant hendrerit ullamcorper. Et velit justo nunc ante arcu. Gravida eu tellus. Adipiscing quam congue nullam.'),
-  ('6', 'Ray The Unicyclist', 'Lorem ipsum dolor sit amet molestie lorem eget risus. Fusce est viverra. Ultricies tristique mattis. Vestibulum lorem molestie convallis amet sem malesuada diam pellentesque. Dui mauris sapien etiam metus enim sem dignissim mi. Laoreet dolor velit vel interdum neque eleifend feugiat praesent. Ut et blandit. Dui congue eleifend. Orci animi nec. In sed ultrices vel ut semper. Facilisis ut a adipiscing eget a enim wisi adipiscing curabitur parturient dolor. Accumsan leo nunc lacus velit fringilla lectus elementum nec. A ac erat a pellentesque mi. Habitant hendrerit ullamcorper. Et velit justo nunc ante arcu. Gravida eu tellus. Adipiscing quam congue nullam.');
+  (2, 'John Snow juggles balls', 'Do you need a talented ball juggler? Look no further than john snow the world renown juggler of balls!'),
+  (3, 'Danny spits hot fire!', 'Do you need a talented fire breather? Look no further than Danny the world renown Fire breather!'),
+  (4, 'Drew knows magic', 'Do you need a talented magician? Look no further than Drew the world renown Magician!'),
+  (5, 'Johnny is a Balloon Genius', 'Do you need a talented balloon maker? Look no further than Johnny  the world renown maker of balloons!'),
+  (6, 'Mikey is an Acrobat', 'Do you need a talented Acrobat? Look no further than john snow the world renown tumbler and trapeeze artist!'),
+  (7, 'Mark the Clown', 'Do you need a talented Clown for kids parties? Look no further than Mark, the world renown childrens party clown!'),
+  (8, 'Vinny is Amazeballs', 'Do you need a talented Clown for an event? Look no further than Vinny, the world renown Clown from Italy!');
+
