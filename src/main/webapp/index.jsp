@@ -10,19 +10,25 @@
 
 <sql:query dataSource="${snapshot}" var="result1">
     SELECT *
-    FROM users
+    FROM users as u
+    JOIN images as i
+    ON i.user_id = i.id
     ORDER BY RAND()
     LIMIT 1;
 </sql:query>
 <sql:query dataSource="${snapshot}" var="result2">
     SELECT *
-    FROM users
+    FROM users as u
+    JOIN images as i
+    ON i.user_id = i.id
     ORDER BY RAND()
     LIMIT 1;
 </sql:query>
 <sql:query dataSource="${snapshot}" var="result3">
     SELECT *
-    FROM users
+    FROM users as u
+    JOIN images as i
+    ON i.user_id = i.id
     ORDER BY RAND()
     LIMIT 1;
 </sql:query>

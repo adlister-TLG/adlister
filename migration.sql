@@ -43,6 +43,13 @@ FROM ads;
 
 SELECT * from users where username = 'john_snow';
 
+SELECT username
+FROM users as u
+  JOIN (SELECT url FROM images)
+  ON i.user_id = i.id
+ORDER BY RAND()
+LIMIT 1;
+
 
 INSERT INTO users (username, email, password, bio, skills) VALUES
   ('admin', 'admin@admin.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'admin bio', 'admin skills'),
