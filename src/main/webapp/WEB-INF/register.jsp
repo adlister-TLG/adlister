@@ -8,6 +8,7 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
     <div class="container-fluid">
+        <div class="jumbotron">
         <h1>Please fill in your information.</h1>
         <form action="/register" method="post">
             <div class="form-group">
@@ -28,6 +29,7 @@
             </div>
             <input type="submit" class="btn btn-primary btn-block">
         </form>
+    </div>
     </div>
     <jsp:include page="partials/scripts.jsp" />
 </body>

@@ -8,6 +8,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container-fluid">
+        <div class="jumbotron">
         <h1 class="text-center">Create An Ad</h1>
         <div id="CreateDiv">
         <form action="/ads/create" method="post">
@@ -19,18 +20,10 @@
                 <label for="description" class="text-center">Description</label>
                 <textarea id="description" name="description" class="form-control"></textarea>
             </div>
-            <div class="form-group">
-                <label for="exampleImageFile" class="text-center">
-                    Upload a Picture
-                </label>
-                <input type="image" id="exampleImageFile" />
-                <p class="help-block">
-                    Upload an image to draw more attention to your ad!
-                </p>
-            </div>
             <input type="submit" value="Create Ad" class="btn btn-primary">
         </form>
         </div>
+    </div>
     </div>
 <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 </body>
