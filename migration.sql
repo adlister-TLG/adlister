@@ -43,10 +43,18 @@ FROM ads;
 
 SELECT * from users where username = 'john_snow';
 
+SELECT u.username, iu.url
+FROM users as u
+LEFT JOIN (SELECT url, user_id FROM images as i
+           ORDER BY RAND()) as iu
+  ON iu.user_id = u.id
+  ORDER BY rand()
+LIMIT 1;
+
 
 INSERT INTO users (username, email, password, bio, skills) VALUES
-  ('admin', 'admin@admin.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'Clownster admin clown, takes care of all the other clowny needs that might come up!', 'Java, mySQL, CSS, HTML, Customer Service, Networking'),
-  ('John_snow', 'joe@joe.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'john snow bio', 'john snow skills'),
+  ('Brad', 'admin@admin.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'Brad bio', 'Brad skills'),
+  ('JohnSnow', 'joe@joe.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'john snow bio', 'john snow skills'),
   ('Danny', 'danny@dan.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'danny bio', 'danny skills'),
   ('Drew', 'drew@drew.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'drew bio', 'drew skills'),
   ('Johnny', 'jon@jon.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'Johnny bio', 'johnny skills'),
@@ -55,21 +63,22 @@ INSERT INTO users (username, email, password, bio, skills) VALUES
   ('Vinny', 'vin@vin.com', '$2a$12$P4EO3NigCVDe5QD5YEDx4Og4p80VrLu8ka4Hp.qc97YcsNVIjkytq', 'Vinny bio', 'Vinny skills');
 
 INSERT INTO images (user_id, img_location, description, url) VALUES
-  ('1', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_01.png'),
-  ('2', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_02.png'),
-  ('3', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_03.png'),
-  ('4', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_04.png'),
-  ('5', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_05.png'),
-  ('6', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_06.png'),
-  ('7', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_07.png'),
-  ('8', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_08.png');
+  ('1', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_01.jpg'),
+  ('2', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_02.jpg'),
+  ('3', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_03.jpg'),
+  ('4', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_04.jpg'),
+  ('5', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_05.jpg'),
+  ('6', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_06.jpg'),
+  ('7', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_07.jpg'),
+  ('8', 'clown hq', 'just clowning around','/pictures/profile/profile_pic_08.jpg');
 
 INSERT INTO ads (user_id, title, description) VALUES
-  (2, 'John Snow juggles balls', 'Do you need a talented ball juggler? Look no further than john snow the world renown juggler of balls!  Always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling'),
-  (3, 'Danny spits hot fire!', 'Do you need a talented fire breather? Look no further than Danny the world renown Fire breather!  Do not stand too close to this fire breathin maniac or youll get toasted!  Wait until you see his trick with the marshmallows, always a crowd pleaser'),
-  (4, 'Drew knows magic', 'Do you need a talented magician? Look no further than Drew the world renown Magician!  Yes, he is the magic man, no one has more tricks than this guy!  Rabbit in the hat, sawing his assistant in half, he has got it all'),
-  (5, 'Johnny is a Balloon Genius', 'Do you need a talented balloon maker? Look no further than Johnny  the world renown maker of balloons!  He will twist up those balloons into all shapes and sizes and he comes with his own helium'),
-  (6, 'Mikey is an Acrobat', 'Do you need a talented Acrobat? Look no further than john snow the world renown tumbler and trapeeze artist!  This guy spins through the air with the greatest of ease!  only a 45% fail rate on this guys jumps, but believe me, that is pretty good for this area!  Help him pay for his hospital bills!'),
-  (7, 'Mark the Clown', 'Do you need a talented Clown for kids parties? Look no further than Mark, the world renown childrens party clown!  Not a single curse from this guy, he keeps it clean for the kids, and brings a tiny mini-horse that he named, "Sombrero"'),
-  (8, 'Vinny is Amazeballs', 'Do you need a talented Clown for an event? Look no further than Vinny, the world renown Clown from Italy!  This Italian clown has a great accent and he loves to play hilarious tricks from the old country on all your party guests!  There are lots of Italian clown but this guy brings his own PIZZA!  What a deal!');
+  (1, 'Brad the mad dancer knows how bring it', 'Do you need a dancing MACHINE? Look no further than Brad the world renown Clown dancer!'),
+  (2, 'John Snow juggles balls', 'Do you need a talented ball juggler? Look no further than john snow the world renown juggler of balls!'),
+  (3, 'Danny spits hot fire!', 'Do you need a talented fire breather? Look no further than Danny the world renown Fire breather!'),
+  (4, 'Drew knows magic', 'Do you need a talented magician? Look no further than Drew the world renown Magician!'),
+  (5, 'Johnny is a Balloon Genius', 'Do you need a talented balloon maker? Look no further than Johnny  the world renown maker of balloons!'),
+  (6, 'Mikey is an Acrobat', 'Do you need a talented Acrobat? Look no further than john snow the world renown tumbler and trapeeze artist!'),
+  (7, 'Mark the Clown', 'Do you need a talented Clown for kids parties? Look no further than Mark, the world renown childrens party clown!'),
+  (8, 'Vinny is Amazeballs', 'Do you need a talented Clown for an event? Look no further than Vinny, the world renown Clown from Italy!');
 

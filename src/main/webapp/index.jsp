@@ -9,21 +9,30 @@
                    user="root"  password="codeup"/>
 
 <sql:query dataSource="${snapshot}" var="result1">
-    SELECT *
-    FROM users
-    ORDER BY RAND()
+    SELECT u.username, iu.url
+    FROM users as u
+    LEFT JOIN (SELECT url, user_id FROM images as i
+    ORDER BY RAND()) as iu
+    ON iu.user_id = u.id
+    ORDER BY rand()
     LIMIT 1;
 </sql:query>
 <sql:query dataSource="${snapshot}" var="result2">
-    SELECT *
-    FROM users
-    ORDER BY RAND()
+    SELECT u.username, iu.url
+    FROM users as u
+    LEFT JOIN (SELECT url, user_id FROM images as i
+    ORDER BY RAND()) as iu
+    ON iu.user_id = u.id
+    ORDER BY rand()
     LIMIT 1;
 </sql:query>
 <sql:query dataSource="${snapshot}" var="result3">
-    SELECT *
-    FROM users
-    ORDER BY RAND()
+    SELECT u.username, iu.url
+    FROM users as u
+    LEFT JOIN (SELECT url, user_id FROM images as i
+    ORDER BY RAND()) as iu
+    ON iu.user_id = u.id
+    ORDER BY rand()
     LIMIT 1;
 </sql:query>
 
@@ -34,7 +43,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Welcome to Clownster!" />
+        <jsp:param name="title" value="Welcome to Clownster" />
     </jsp:include>
 </head>
 <body>
@@ -64,31 +73,43 @@
         <div class="row">
             <div class="col-md-12">
                 <h3 class="text-center">
-                    Here are Some Selected Clowns
+                    Here are Some Selected Clowns!
                 </h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="ads col-md-4">
                 <c:forEach var="row" items="${result1.rows}">
                     <h3><c:out value="${row.username}"/></h3>
+                    <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <img src="http://placehold.it/300x400">
-                <a class="btn btn-primary btn-large" href="/ads?id=1">View Ad</a>
+                <div class="container">
+                    <button type="button" class="btn btn-default">
+                        View Ad
+                    </button>
+                </div>
             </div>
-            <div class="col-md-4">
+            <div class="ads col-md-4">
                 <c:forEach var="row" items="${result2.rows}">
                     <h3><c:out value="${row.username}"/></h3>
+                    <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <img src="http://placehold.it/300x400">
-                <a class="btn btn-primary btn-large" href="/ads?id=2">View Ad</a>
+                <div class="container">
+                    <button type="button" class="btn btn-default">
+                        View Ad
+                    </button>
+                </div>
             </div>
-            <div class="col-md-4">
+            <div class="ads col-md-4">
                 <c:forEach var="row" items="${result3.rows}">
                     <h3><c:out value="${row.username}"/></h3>
+                    <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <img src="http://placehold.it/300x400">
-                <a class="btn btn-primary btn-large" href="/ads?id=3">View Ad</a>
+                <div class="container">
+                    <button type="button" class="btn btn-default">
+                        View Ad
+                    </button>
+                </div>
             </div>
         </div>
     </div>
