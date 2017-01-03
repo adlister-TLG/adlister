@@ -51,6 +51,20 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    public Integer updateUser(User user) {
+        String query = "UPDATE users SET bio = ?, skills = ? WHERE username = ? ";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, user.getBio());
+            stmt.setString(2, user.getSkills());
+            stmt.setString(3, user.getUsername());
+            return stmt.executeUpdate();
+
+        } catch (SQLException e) {
+           throw new RuntimeException("Error updating bio and skills", e);
+        }
+    }
+
 
 
 
