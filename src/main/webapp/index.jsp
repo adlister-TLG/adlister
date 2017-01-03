@@ -78,7 +78,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="ads col-md-4">
                 <c:forEach var="row" items="${result1.rows}">
                     <h3><c:out value="${row.username}"/></h3>
                     <img src=<c:out value="${row.url}"/>>
@@ -87,8 +87,8 @@
                     View Ad
                 </button>
             </div>
-            <div class="col-md-4">
-                <c:forEach var="row" items="${result1.rows}">
+            <div class="ads col-md-4">
+                <c:forEach var="row" items="${result2.rows}">
                     <h3><c:out value="${row.username}"/></h3>
                     <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
@@ -96,8 +96,8 @@
                     View Ad
                 </button>
             </div>
-            <div class="col-md-4">
-                <c:forEach var="row" items="${result1.rows}">
+            <div class="ads col-md-4">
+                <c:forEach var="row" items="${result3.rows}">
                     <h3><c:out value="${row.username}"/></h3>
                     <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
