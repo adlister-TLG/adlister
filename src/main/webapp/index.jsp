@@ -83,27 +83,33 @@
                     <h3><c:out value="${row.username}"/></h3>
                     <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <button type="button" class="btn btn-default">
-                    View Ad
-                </button>
+                <div class="container">
+                    <button type="button" class="btn btn-default">
+                        View Ad
+                    </button>
+                </div>
             </div>
             <div class="ads col-md-4">
                 <c:forEach var="row" items="${result2.rows}">
                     <h3><c:out value="${row.username}"/></h3>
                     <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <button type="button" class="btn btn-default">
-                    View Ad
-                </button>
+                <div class="container">
+                    <button type="button" class="btn btn-default">
+                        View Ad
+                    </button>
+                </div>
             </div>
             <div class="ads col-md-4">
                 <c:forEach var="row" items="${result3.rows}">
                     <h3><c:out value="${row.username}"/></h3>
                     <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <button type="button" class="btn btn-default">
-                    View Ad
-                </button>
+                <div class="container">
+                    <button type="button" class="btn btn-default">
+                        View Ad
+                    </button>
+                </div>
             </div>
         </div>
     </div>
