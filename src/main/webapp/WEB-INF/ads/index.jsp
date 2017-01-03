@@ -20,7 +20,7 @@
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
                 <p>
-                    <a href="/ads?id=${ad.id}" class="btn btn-primary btn-large" href="#">Show More Details</a>
+                    <a href="/ads?id=${ad.id}" class="btn btn-primary btn-large">Show More Details</a>
                 </p>
         </div>
         </div>

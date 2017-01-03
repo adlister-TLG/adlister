@@ -74,11 +74,12 @@ INSERT INTO images (user_id, img_location, description, url) VALUES
 
 INSERT INTO ads (user_id, title, description) VALUES
   (1, 'Brad the mad dancer knows how bring it', 'Do you need a dancing MACHINE? Look no further than Brad the world renown Clown dancer!'),
-  (2, 'John Snow juggles balls', 'Do you need a talented ball juggler? Look no further than john snow the world renown juggler of balls!'),
-  (3, 'Danny spits hot fire!', 'Do you need a talented fire breather? Look no further than Danny the world renown Fire breather!'),
-  (4, 'Drew knows magic', 'Do you need a talented magician? Look no further than Drew the world renown Magician!'),
-  (5, 'Johnny is a Balloon Genius', 'Do you need a talented balloon maker? Look no further than Johnny  the world renown maker of balloons!'),
-  (6, 'Mikey is an Acrobat', 'Do you need a talented Acrobat? Look no further than john snow the world renown tumbler and trapeeze artist!'),
-  (7, 'Mark the Clown', 'Do you need a talented Clown for kids parties? Look no further than Mark, the world renown childrens party clown!'),
-  (8, 'Vinny is Amazeballs', 'Do you need a talented Clown for an event? Look no further than Vinny, the world renown Clown from Italy!');
+  (2, 'John Snow juggles balls', 'Do you need a talented ball juggler? Look no further than john snow the world renown juggler of balls!  Always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling, always juggling'),
+  (3, 'Danny spits hot fire!', 'Do you need a talented fire breather? Look no further than Danny the world renown Fire breather!  Do not stand too close to this fire breathin maniac or youll get toasted!  Wait until you see his trick with the marshmallows, always a crowd pleaser'),
+  (4, 'Drew knows magic', 'Do you need a talented magician? Look no further than Drew the world renown Magician!  Yes, he is the magic man, no one has more tricks than this guy!  Rabbit in the hat, sawing his assistant in half, he has got it all'),
+  (5, 'Johnny is a Balloon Genius', 'Do you need a talented balloon maker? Look no further than Johnny  the world renown maker of balloons!  He will twist up those balloons into all shapes and sizes and he comes with his own helium'),
+  (6, 'Mikey is an Acrobat', 'Do you need a talented Acrobat? Look no further than john snow the world renown tumbler and trapeeze artist!  This guy spins through the air with the greatest of ease!  only a 45% fail rate on this guys jumps, but believe me, that is pretty good for this area!  Help him pay for his hospital bills!'),
+  (7, 'Mark the Clown', 'Do you need a talented Clown for kids parties? Look no further than Mark, the world renown childrens party clown!  Not a single curse from this guy, he keeps it clean for the kids, and brings a tiny mini-horse that he named, "Sombrero"'),
+  (8, 'Vinny is Amazeballs', 'Do you need a talented Clown for an event? Look no further than Vinny, the world renown Clown from Italy!  This Italian clown has a great accent and he loves to play hilarious tricks from the old country on all your party guests!  There are lots of Italian clown but this guy brings his own PIZZA!  What a deal!');
+
 
