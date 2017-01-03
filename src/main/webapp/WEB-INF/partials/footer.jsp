@@ -45,7 +45,7 @@
         </div>
         <div class="contact col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <h1>Contact Us</h1>
-            <p>If there is an event you need a clown for, fill out the contact for below <br><strong>We aren't clowning around.&nbsp;</strong>
+            <p>If you're searching for a clown for an event but can't find exactly what you're looking for, fill out the contact form below <br><strong>We aren't clowning around.&nbsp;</strong>
             <form action="#" method="post" accept-charset="UTF-8">
                 <div class="col-xs-12">
                     <input type="text" name="contact[name]" class="form-control" id="footer_contact_name" placeholder="Your name"/>

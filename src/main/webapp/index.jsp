@@ -48,9 +48,7 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-
-
-    <div class="container">
+    <div class="container home">
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">
@@ -72,9 +70,9 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center">
+                <h2 class="text-center">
                     Here are Some Selected Clowns!
-                </h3>
+                </h2>
             </div>
         </div>
         <div class="row">
@@ -83,33 +81,21 @@
                     <h3><c:out value="${row.username}"/></h3>
                     <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <div class="container">
-                    <button type="button" class="btn btn-default">
-                        View Ad
-                    </button>
-                </div>
+                    <a class="btn btn-primary btn-large" href="/ads?id=1">View Ad</a>
             </div>
             <div class="ads col-md-4">
                 <c:forEach var="row" items="${result2.rows}">
                     <h3><c:out value="${row.username}"/></h3>
                     <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <div class="container">
-                    <button type="button" class="btn btn-default">
-                        View Ad
-                    </button>
-                </div>
+                    <a class="btn btn-primary btn-large" href="/ads?id=2">View Ad</a>
             </div>
             <div class="ads col-md-4">
                 <c:forEach var="row" items="${result3.rows}">
                     <h3><c:out value="${row.username}"/></h3>
                     <img src=<c:out value="${row.url}"/>>
                 </c:forEach>
-                <div class="container">
-                    <button type="button" class="btn btn-default">
-                        View Ad
-                    </button>
-                </div>
+                    <a class="btn btn-primary btn-large" href="/ads?id=3">View Ad</a>
             </div>
         </div>
     </div>
