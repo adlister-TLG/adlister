@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -21,14 +22,17 @@
                         <li>
                             <a href="/ads">View Ads</a>
                         </li>
-                        <li>
-                            <a href="/register">Register</a>
-                        </li>
+                        <c:if test="${sessionScope.user == null}">
+                            <li>
+                                <a href="/register">Register</a>
+                            </li>
+                        </c:if>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <form action= "search" method="POST" class="navbar-form navbar-left" role="search">
+                        <form action="search" method="POST" class="navbar-form navbar-left" role="search">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="ad" placeholder="i.e. Chuckles, balloon twister"/>
+                                <input type="text" class="form-control" name="ad"
+                                       placeholder="i.e. Chuckles, balloon twister"/>
                             </div>
                             <button type="submit" class="btn btn-default" value="Submit">
                                 Clown Around
@@ -36,7 +40,8 @@
                         </form>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="http://placehold.it/18x18" class="profile-image img-circle"> ${sessionScope.user.username} <strong
+                                <img src="http://placehold.it/18x18"
+                                     class="profile-image img-circle"> ${sessionScope.user.username} <strong
                                     class="caret"></strong></a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -49,14 +54,18 @@
                                 </li>
                                 <li class="divider">
                                 </li>
-                                <li>
-                                    <a href="/login">Login</a>
-                                </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="/logout">Logout</a>
-                                </li>
+                                <c:choose>
+                                    <c:when test="${sessionScope.user == null}">
+                                        <li>
+                                            <a href="/login">Login</a>
+                                        </li>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <li>
+                                            <a href="/logout">Logout</a>
+                                        </li>
+                                    </c:otherwise>
+                                </c:choose>
                             </ul>
                         </li>
                     </ul>
