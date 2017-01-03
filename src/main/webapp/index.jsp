@@ -74,27 +74,21 @@
                     <h3><c:out value="${row.username}"/></h3>
                 </c:forEach>
                 <img src="http://placehold.it/300x400">
-                <button type="button" class="btn btn-default">
-                    View Ad
-                </button>
+                <a class="btn btn-primary btn-large" href="/ads?id=1">View Ad</a>
             </div>
             <div class="col-md-4">
                 <c:forEach var="row" items="${result2.rows}">
                     <h3><c:out value="${row.username}"/></h3>
                 </c:forEach>
                 <img src="http://placehold.it/300x400">
-                <button type="button" class="btn btn-default">
-                    View Ad
-                </button>
+                <a class="btn btn-primary btn-large" href="/ads?id=2">View Ad</a>
             </div>
             <div class="col-md-4">
                 <c:forEach var="row" items="${result3.rows}">
                     <h3><c:out value="${row.username}"/></h3>
                 </c:forEach>
                 <img src="http://placehold.it/300x400">
-                <button type="button" class="btn btn-default">
-                    View Ad
-                </button>
+                <a class="btn btn-primary btn-large" href="/ads?id=3">View Ad</a>
             </div>
         </div>
     </div>

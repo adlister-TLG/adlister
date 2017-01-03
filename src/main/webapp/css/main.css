@@ -149,3 +149,7 @@ input#footer_contact_name {
     -moz-box-shadow: inset 0 0 0 lime !important;
     box-shadow: inset 0 0 0 lime !important;
 }
+
+#ads{
+    background-color: #FFC100 !important;
+}
