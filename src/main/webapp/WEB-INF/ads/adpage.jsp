@@ -9,10 +9,11 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container-fluid">
-<div class="row">
-    <div class="col-md-6 text-center">
-<h1>${ad.title}</h1>
-<p>${ad.description}</p>
+    <div class="row">
+        <div class="col-md-6 text-center">
+    <h1>${ad.title}</h1>
+    <p>${ad.description}</p>
+        </div>
     </div>
 </div>
 </body>
