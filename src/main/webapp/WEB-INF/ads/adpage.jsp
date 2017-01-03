@@ -10,9 +10,15 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6 text-center">
-    <h1>${ad.title}</h1>
-    <p>${ad.description}</p>
+        <div class="col-md-12">
+            <h1 class="text-center">Viewing Ad</h1>
+            <div class="jumbotron">
+                <h2>${ad.title}</h2>
+                <p>${ad.description}</p>
+                <p>
+                    <a href="/ads" class="btn btn-primary btn-large">Back to All Ads</a>
+                </p>
+            </div>
         </div>
     </div>
 </div>

@@ -7,7 +7,6 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-
 <div class="container-fluid">
     <div class="jumbotron">
     <div class="row">
@@ -24,7 +23,6 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Bio:</label>
                     <div class="col-lg-8">
-
                         <input class="form-control" type="text" name="bio">
                     </div>
                 </div>
@@ -34,13 +32,13 @@
                         <input class="form-control" type="text" name="skills">
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label class="col-md-3 control-label"></label>
                     <div class="col-md-8">
                         <input type="submit" class="btn btn-primary" value="Save Changes">
                         <span></span>
-                        <input type="reset" class="btn btn-default" value="Cancel">
+                        <input type="reset" class="btn btn-default" value="Clear Fields">
+                        <a href="/profile" class="btn btn-primary btn-large">Cancel</a>
                     </div>
                 </div>
             </form>
